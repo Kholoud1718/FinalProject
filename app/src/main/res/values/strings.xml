@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Challenge ME</string>
-    <string name="next_event">NEXT EVENT</string>
+    <string name="next_event">NEXT EVENT Text</string>
     <string name="explore_events">Explore Events</string>
     <string name="challenge_categories">Challenge Categories</string>
     <string name="event_proximity">Event Proximity</string>
