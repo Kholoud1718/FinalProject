@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Challenge ME</string>
+    <string name="next_event">NEXT EVENT</string>
+    <string name="explore_events">Explore Events</string>
+    <string name="challenge_categories">Challenge Categories</string>
+    <string name="event_proximity">Event Proximity</string>
+    <string name="event_schedule">Event Schedule</string>
+    <string name="cancle">Cancle</string>
+    <string name="cross_fit">Cross Fit</string>
+    <string name="_00_00_2024">00/00/2024</string>
+</resources>
