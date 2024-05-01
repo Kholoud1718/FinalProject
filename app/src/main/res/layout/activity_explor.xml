@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    style="@style/TextAppearance.MaterialComponents.Button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ground"
+    android:padding="7dp"
+    android:rotationX="0">
+
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/fontdiner_swanky"
+        android:text="Challenge Me"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/design_default_color_on_primary"
+        android:textSize="20sp" />
+
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="477dp"
+        android:background="@android:color/transparent"
+        android:layout_height="152dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="60dp"
+        android:scaleType="fitXY"
+        android:alpha="0.2"
+        app:srcCompat="@drawable/u" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:gravity="center"
+        android:layout_marginTop="250dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/ChallengeCategories"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#72DBF304"
+            android:fontFamily="casual"
+            android:text="@string/challenge_categories"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="26sp" />
+
+
+        <Button
+            android:id="@+id/EventProximity"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#70ECE568"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:text="@string/event_proximity"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/black"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/Event_Schedule"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#4A85CFA9"
+            android:fontFamily="casual"
+            android:text="@string/event_schedule"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/black"
+            android:textSize="27sp" />
+
+
+    </LinearLayout>
+
+
+
+    </RelativeLayout>

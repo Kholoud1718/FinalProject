@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap
+            android:src="@drawable/ground"
+            android:tileMode="disabled" />
+    </item>
+    <item>
+        <color android:color="#6DFFFFFF"/> <!-- This is a semi-transparent white color -->
+    </item>
+</layer-list>

@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Style for circular ShapeableImageView -->
+    <style name="CircularImageView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.App.CornerSize50Percent</item>
+    </style>
+
+    <!-- Shape Appearance style for 50% corner size which makes the view circular -->
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent">
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <!-- Define your style attributes here -->
+    </style>
+    <style name="BoldTextViewStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

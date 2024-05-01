@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    style="@style/TextAppearance.MaterialComponents.Button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ground"
+    android:padding="7dp"
+    android:rotationX="0">
+
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/fontdiner_swanky"
+        android:text="Challenge Me"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/design_default_color_on_primary"
+        android:textSize="20sp" />
+
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="477dp"
+        android:background="@android:color/transparent"
+        android:layout_height="152dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="60dp"
+        android:scaleType="fitXY"
+        android:alpha="0.2"
+        app:srcCompat="@drawable/u" />
+
+    <TextView
+        android:id="@+id/MyEvents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="15dp"
+        android:fontFamily="casual"
+        android:text="My Event:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/white"
+        android:textSize="40dp" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:gravity="center"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/Event1"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#72DBF304"
+            android:fontFamily="casual"
+            android:text="Run the Tan Royal Botanic  22 May 2024"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/Event2"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#70ECE568"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:text="Hard Yacka Mountain Bike Race 06 Apr 2024"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/Event3"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#4A85CFA9"
+            android:fontFamily="casual"
+            android:text="Massive Murray Paddle 3 JUN 2024"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="580dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/cancel_button3"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="2"
+            android:backgroundTint="#9AFF8A80"
+            android:text="Cancel"
+            android:fontFamily="casual"
+            android:textSize="20sp"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/ok_button3"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:layout_marginStart="9dp"
+            android:layout_weight="2"
+            android:backgroundTint="#9C78E67C"
+            android:fontFamily="casual"
+            android:text="Ok"
+            android:textSize="20sp"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark" />
+    </LinearLayout>
+</RelativeLayout>
+
+
