@@ -1,11 +1,13 @@
 package com.example.finalproject;
 
 import android.content.Intent;
+import android.view.Window;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import android.view.WindowManager;
 
 public class MainActivity extends AppCompatActivity {
     TextView appName;
@@ -17,24 +19,42 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); // Make sure this layout file name matches your XML file
+        setContentView(R.layout.activity_main);
+
+        if (android.os.Build.VERSION.SDK_INT >= 21) {
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark)); // Set your color here
+        }
 
         // Initialize UI components
         appName = findViewById(R.id.appName);
-        nextEvent = findViewById(R.id.NextEvent); // Make sure ID matches your XML
-        exploreEvents = findViewById(R.id.ExploreEvents); // Make sure ID matches your XML
-        myEvents = findViewById(R.id.MyEvents); // Make sure ID matches your XML
+        nextEvent = findViewById(R.id.NextEvent); //
+        exploreEvents = findViewById(R.id.ExploreEvents);
+        myEvents = findViewById(R.id.MyEvents); //
         challengeMeCommunity = findViewById(R.id.ChallengeMeCommunity); // Make sure ID matches your XML
 
         // Set click listeners for buttons
-        exploreEvents.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Create an Intent to start the SecondActivity
-                Intent intent = new Intent(MainActivity.this, Explor.class);
-                startActivity(intent); // Start the SecondActivity
-            }
+        exploreEvents.setOnClickListener(v -> {
+            // Create an Intent to start the SecondActivity
+            Intent intent = new Intent(MainActivity.this, ChallengeActivity.class);
+            startActivity(intent); // Start the SecondActivity
         });
+        myEvents .setOnClickListener(v -> {
+            // Create an Intent to start the SecondActivity
+            Intent intent = new Intent(MainActivity.this, MyEventActivity.class);
+            startActivity(intent); // Start the SecondActivity
+        });
+        challengeMeCommunity.setOnClickListener(v -> {
+            // Create an Intent to start the SecondActivity
+            Intent intent = new Intent(MainActivity.this,CommunityActivity.class);
+            startActivity(intent); // Start the SecondActivity
+        });
+
+
+
+
+
 
 
     }

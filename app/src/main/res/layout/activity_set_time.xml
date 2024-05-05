@@ -1,21 +1,22 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     style="@style/TextAppearance.MaterialComponents.Button"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/ground"
     android:foregroundTint="#F6F0F0"
     android:padding="7dp"
     android:rotationX="0">
 
-
     <TextView
         android:id="@+id/appName"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="77dp"
-        android:layout_alignParentTop="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="5dp"
         android:layout_marginTop="2dp"
         android:fontFamily="@font/fontdiner_swanky"
@@ -24,13 +25,12 @@
         android:textColor="@color/design_default_color_on_primary"
         android:textSize="20sp" />
 
-
     <ImageView
         android:id="@+id/image2"
         android:layout_width="wrap_content"
         android:layout_height="93dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appName"
         android:layout_marginEnd="3dp"
         android:alpha="0.2"
         android:background="@android:color/transparent"
@@ -40,10 +40,13 @@
     <TextView
         android:id="@+id/tvSetTime"
         android:layout_width="300dp"
-        android:layout_height="93dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/image2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginBottom="20dp"
+        android:gravity="center_vertical"
         android:drawableRight="@drawable/baseline_access_alarms_24"
         android:fontFamily="casual"
         android:text="Set TIME:"
@@ -55,7 +58,9 @@
         android:id="@+id/tvFrom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvSetTime"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
         android:fontFamily="casual"
         android:text="From:"
         android:textColor="@color/white"
@@ -63,95 +68,105 @@
 
     <EditText
         android:id="@+id/etFromTime"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="60dp"
+        android:layout_marginHorizontal="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvFrom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:hint="@string/_00_00_2024"
         android:inputType="datetime"
         android:background="@color/white"
-        android:layout_centerHorizontal="true"
-        android:alpha="0.6"
-        android:layout_below="@id/tvFrom"/>
+        android:alpha="0.6"/>
 
-    <!-- To time input -->
     <TextView
         android:id="@+id/tvTo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/etFromTime"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
         android:text="To:"
         android:textColor="@color/white"
         android:textSize="30sp"
-        android:fontFamily="casual"
-        android:layout_below="@id/etFromTime"
-        android:layout_marginTop="20dp"/>
+        android:fontFamily="casual"/>
 
     <EditText
         android:id="@+id/etToTime"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="60dp"
+        android:layout_marginHorizontal="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvTo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:hint="00/00/2024"
         android:inputType="datetime"
-        android:layout_centerHorizontal="true"
         android:alpha="0.6"
-        android:background="@color/white"
-        android:layout_below="@id/tvTo"/>
+        android:background="@color/white"/>
 
-    <!-- Alarm time input -->
     <TextView
         android:id="@+id/tvAlarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/etToTime"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
         android:text="Alarm me:"
         android:textColor="@color/white"
         android:textSize="30sp"
-        android:fontFamily="casual"
-        android:layout_below="@id/etToTime"
-        android:layout_marginTop="20dp"/>
+        android:fontFamily="casual"/>
 
     <EditText
         android:id="@+id/etAlarmTime"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="60dp"
+        android:layout_marginHorizontal="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlarm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:hint="00:00"
         android:inputType="time"
         android:alpha="0.6"
-        android:layout_centerHorizontal="true"
-        android:background="@color/white"
-        android:layout_below="@id/tvAlarm"/>
+        android:background="@color/white"/>
 
-    <!-- Cancel and OK buttons -->
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="580dp"
+        android:gravity="center"
+        android:layout_marginHorizontal="15dp"
         android:orientation="horizontal"
-        android:gravity="center">
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
-            android:id="@+id/cancel_button3"
-            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:layout_weight="2"
-            android:backgroundTint="#9AFF8A80"
-            android:text="Cancel"
-            android:fontFamily="casual"
-            android:textSize="20sp"
-            android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
-            android:textStyle="bold"
-            android:layout_marginEnd="8dp"/>
-
-        <Button
-            android:id="@+id/ok_button2"
+            android:id="@+id/cancel_button"
             style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="2"
+            android:backgroundTint="#9CDD2C00"
+            android:fontFamily="casual"
+            android:text="Cancel"
+            android:textSize="29sp"
             android:textStyle="bold"
+            android:textColor="@color/black"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark" />
+
+        <Button
+            android:id="@+id/ok_button"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginStart="9dp"
             android:layout_weight="2"
-            android:backgroundTint="#9C78E67C"
+            android:backgroundTint="#9C41F147"
             android:fontFamily="casual"
-            android:text="Ok"
-            android:textSize="20sp"
-            android:theme="@style/ThemeOverlay.MaterialComponents.Dark" />
+            android:text="Show Map"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark"/>
     </LinearLayout>
-</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

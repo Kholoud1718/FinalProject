@@ -3,6 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="checkbox_checked">#72DBF304</color>
+    <color name="colorOnTertiaryFixedVariant">#FF5722</color>
+    <color name="colorPrimaryDark">#090909</color>
+
 </resources>
 
 

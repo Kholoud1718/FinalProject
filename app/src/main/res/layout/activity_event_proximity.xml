@@ -1,48 +1,49 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     style="@style/TextAppearance.MaterialComponents.Button"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/ground"
     android:foregroundTint="#F6F0F0"
-    android:padding="7dp"
-    android:rotationX="0">
-
+    android:padding="0dp"
+    android:rotationX="0"
+    android:textAlignment="viewStart">
 
     <TextView
         android:id="@+id/appName"
         android:layout_width="match_parent"
-        android:layout_height="77dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/fontdiner_swanky"
         android:text="Challenge Me"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/design_default_color_on_primary"
-        android:textSize="20sp" />
-
-
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"/>
     <ImageView
         android:id="@+id/image2"
         android:layout_width="wrap_content"
-        android:layout_height="93dp"
+        android:layout_height="100dp"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="3dp"
         android:alpha="0.2"
         android:background="@android:color/transparent"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/u" />
-
+        app:srcCompat="@drawable/u"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
     <TextView
         android:id="@+id/SearchRadius"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@id/image2"
+        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="15dp"
         android:fontFamily="casual"
         android:text="Search Radius"
@@ -52,98 +53,120 @@
 
     <LinearLayout
         android:id="@+id/llCheckBoxList2"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="300dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="40dp"
         android:orientation="vertical"
-        android:layout_centerHorizontal="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SearchRadius"
         tools:ignore="ExtraText">
-
-
-
 
         <CheckBox
             android:id="@+id/kilos5"
-            style="@android:style/Widget.Material.Light.CompoundButton.CheckBox"
+            style="@android:style/Widget.Material.CompoundButton.CheckBox"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:alpha="0.5"
-            android:background="@color/material_dynamic_primary90"
-            android:drawableRight="@drawable/baseline_5k_24"
-            android:buttonTint="#0E0E0E"
-            android:fontFamily="casual"
-            android:text="5 Kilos "
-            android:paddingEnd="16dp"
-            android:textColor="@color/black"
-            android:textSize="40sp"
+            android:layout_height="80dp"
+            android:alpha="0.7"
+            android:shadowColor="#0B0B0B"
+            android:shadowDx="4"
+            android:shadowDy="5"
+            android:shadowRadius="3"
+            android:background="#3D3C3E"
+            android:buttonTint="#FFFFFF"
+            android:drawableEnd="@drawable/baseline_5k_24"
+            android:fontFamily="@font/goblin_one"
+            android:text="@string/_5_kilos"
+            android:textColor="@color/white"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
         <CheckBox
             android:id="@+id/kilos10"
             style="@android:style/Widget.Material.Light.CompoundButton.CheckBox"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:alpha="0.5"
-            android:background="@color/design_default_color_secondary"
-            android:buttonTint="#0E0E0E"
-            android:drawableRight="@drawable/baseline_10k_24"
-            android:fontFamily="casual"
-            android:paddingEnd="16dp"
+            android:layout_height="80dp"
+            android:alpha="0.7"
+            android:background="#3D3C3E"
+            android:buttonTint="#FDFDFD"
+            android:shadowColor="#121212"
+            android:shadowDx="4"
+            android:shadowDy="5"
+            android:shadowRadius="3"
+            android:drawableEnd="@drawable/baseline_10k_24"
+            android:fontFamily="@font/goblin_one"
             android:text="10-20 kilos"
-            android:textColor="@color/black"
-            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
         <CheckBox
             android:id="@+id/AnyDistance"
             style="@android:style/Widget.Material.Light.CompoundButton.CheckBox"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:alpha="0.6"
+            android:layout_height="80dp"
+            android:alpha="0.7"
+            android:background="#3D3C3E"
+            android:buttonTint="#FEFCFF"
             android:drawableRight="@drawable/baseline_360_24"
-            android:background="@color/design_default_color_secondary_variant"
-            android:buttonTint="#0E0E0E"
-            android:fontFamily="casual"
-            android:text="Any Distance"
+            android:fontFamily="@font/goblin_one"
             android:paddingEnd="16dp"
-            android:textColor="@color/black"
-            android:textSize="40sp"
+            android:text="Any Distance"
+            android:shadowColor="#070707"
+            android:shadowDx="4"
+            android:shadowDy="5"
+            android:shadowRadius="3"
+            android:textColor="@color/white"
+            android:textSize="25sp"
             android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="580dp"
+        android:gravity="center"
+        android:layout_marginHorizontal="15dp"
         android:orientation="horizontal"
-        android:gravity="center">
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
-            android:id="@+id/cancel_button3"
-            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:layout_weight="2"
-            android:backgroundTint="#9AFF8A80"
-            android:text="Cancel"
-            android:fontFamily="casual"
-            android:textSize="20sp"
-            android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
-            android:textStyle="bold"
-            android:layout_marginEnd="8dp"/>
-
-        <Button
-            android:id="@+id/ok_button2"
+            android:id="@+id/cancel_button"
             style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:textStyle="bold"
-            android:layout_marginStart="9dp"
-            android:layout_weight="2"
-            android:backgroundTint="#9C78E67C"
+            android:layout_weight="1"
+            android:backgroundTint="#9CDD2C00"
+            android:text="Cancel"
             android:fontFamily="casual"
-            android:text="Ok"
-            android:textSize="20sp"
-            android:theme="@style/ThemeOverlay.MaterialComponents.Dark" />
+            android:shadowColor="#717070"
+            android:shadowDx="4"
+            android:shadowDy="5"
+            android:shadowRadius="3"
+            android:textSize="30sp"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/next_button"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#BC126E15"
+            android:text="Next"
+            android:fontFamily="casual"
+            android:shadowColor="#717070"
+            android:shadowDx="4"
+            android:shadowDy="5"
+            android:shadowRadius="3"
+            android:textSize="30sp"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="9dp"/>
     </LinearLayout>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

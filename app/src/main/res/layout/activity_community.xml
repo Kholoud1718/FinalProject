@@ -1,20 +1,18 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
-    style="@style/TextAppearance.MaterialComponents.Button"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/ground"
-    android:padding="7dp"
-    android:rotationX="0">
-
+    android:padding="7dp">
 
     <TextView
         android:id="@+id/appName"
-        android:layout_width="match_parent"
-        android:layout_height="77dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/fontdiner_swanky"
         android:text="Challenge Me"
@@ -22,14 +20,14 @@
         android:textColor="@color/design_default_color_on_primary"
         android:textSize="20sp" />
 
-
     <ImageView
         android:id="@+id/image2"
-        android:layout_width="477dp"
-        android:background="@android:color/transparent"
-        android:layout_height="152dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="60dp"
+        android:layout_width="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/appName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:scaleType="fitXY"
         android:alpha="0.2"
         app:srcCompat="@drawable/u" />
@@ -38,119 +36,87 @@
         android:id="@+id/ChallengeMeCommunity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginStart="15dp"
-        android:fontFamily="casual"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/image2"
+        app:layout_constraintStart_toStartOf="parent"
         android:text="Challenge ME community:"
+        android:fontFamily="casual"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/white"
-        android:textSize="30dp" />
-
+        android:textSize="30sp" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/buttonLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:gravity="center"
-        android:layout_marginTop="180dp"
-        android:layout_centerHorizontal="true"
-        android:orientation="vertical">
-
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/ChallengeMeCommunity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:gravity="center">
 
         <Button
             android:id="@+id/group"
-            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+            style="@style/Widget.Material3.MaterialTimePicker.Button"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#72DBF304"
-            android:fontFamily="casual"
+            android:backgroundTint="#72ECDE93"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/goblin_one"
             android:text="Join a Group"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/story"
-            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
             android:layout_width="match_parent"
+            style="@style/Widget.Material3.MaterialTimePicker.Button"
             android:layout_height="80dp"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#70ECE568"
-            android:fontFamily="casual"
-            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#72ECDE93"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/goblin_one"
             android:text="Share Your Story"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="@color/black"
-            android:textSize="30sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/Challenges"
-            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#945F7BAA"
-            android:fontFamily="casual"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="#72ECDE93"
+            android:fontFamily="@font/goblin_one"
             android:text="Community Challenges"
-            android:textStyle="bold"
+            style="@style/Widget.Material3.MaterialTimePicker.Button"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
         <Button
             android:id="@+id/Event3"
-            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#4A85CFA9"
-            android:fontFamily="casual"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#72ECDE93"
+            style="@style/Widget.Material3.MaterialTimePicker.Button"
+            android:fontFamily="@font/goblin_one"
             android:text="Attend a Virtual Event"
-            android:textStyle="bold"
+            android:layout_marginHorizontal="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
 
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="650dp"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <Button
-            android:id="@+id/cancel_button3"
-            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:layout_weight="2"
-            android:backgroundTint="#9AFF8A80"
-            android:text="Cancel"
-            android:fontFamily="casual"
-            android:textSize="20sp"
-            android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
-            android:textStyle="bold"
-            android:layout_marginEnd="8dp"/>
-
-        <Button
-            android:id="@+id/ok_button3"
-            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:textStyle="bold"
-            android:layout_marginStart="9dp"
-            android:layout_weight="2"
-            android:backgroundTint="#9C78E67C"
-            android:fontFamily="casual"
-            android:text="Ok"
-            android:textSize="20sp"
-            android:theme="@style/ThemeOverlay.MaterialComponents.Dark" />
-    </LinearLayout>
-</RelativeLayout>
-
-
+</androidx.constraintlayout.widget.ConstraintLayout>

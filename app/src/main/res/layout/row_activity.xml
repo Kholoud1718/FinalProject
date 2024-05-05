@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                style="@android:style/Widget.Material.Light.CompoundButton.CheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:alpha="0.8"
+                android:background="#FFBB33"
+                android:buttonTint="#0E0E0E"
+                android:drawableEnd="@drawable/baseline_pool_24"
+                android:fontFamily="casual"
+                android:paddingEnd="16dp"
+                android:text="Swimming"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+</LinearLayout>

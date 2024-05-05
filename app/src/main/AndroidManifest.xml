@@ -15,26 +15,36 @@
         android:theme="@style/Theme.FinalProject"
         tools:targetApi="31">
         <activity
-            android:name=".Community"
+            android:name=".ui.main.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".MyEvent"
+            android:name=".MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".CommunityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyEventActivity"
             android:exported="false"
             android:screenOrientation="sensorPortrait" />
         <activity
-            android:name=".SetTime"
+            android:name=".SetTimeActivity"
             android:exported="false"
             android:screenOrientation="sensorPortrait" />
         <activity
-            android:name=".EventProximity"
+            android:name=".EventProximityActivity"
             android:exported="false"
             android:screenOrientation="sensorPortrait" />
         <activity
-            android:name=".challengeActivity"
+            android:name=".ChallengeActivity"
             android:exported="false"
             android:screenOrientation="sensorPortrait" />
         <activity
-            android:name=".Explor"
+            android:name=".ExploreActivity"
             android:exported="false"
             android:screenOrientation="sensorPortrait" />
         <activity
