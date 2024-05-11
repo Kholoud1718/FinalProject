@@ -18,7 +18,7 @@
             android:name=".ui.main.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".MapActivity"
+            android:name=".MapsActivity"
             android:exported="false" />
         <activity
             android:name=".ui.login.LoginActivity"
@@ -44,10 +44,6 @@
             android:exported="false"
             android:screenOrientation="sensorPortrait" />
         <activity
-            android:name=".ExploreActivity"
-            android:exported="false"
-            android:screenOrientation="sensorPortrait" />
-        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:screenOrientation="sensorPortrait">
@@ -61,6 +57,10 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC6I0ZIz8vLjl5ldcoVidbbv-77uzDI66M"/>
     </application>
 
 </manifest>

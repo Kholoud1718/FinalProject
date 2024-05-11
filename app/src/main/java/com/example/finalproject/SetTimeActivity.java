@@ -23,7 +23,7 @@ public class SetTimeActivity extends AppCompatActivity {
         });
 
         findViewById(R.id.ok_button).setOnClickListener( v ->
-                startActivity(new Intent(SetTimeActivity.this, MapActivity.class)));
+                startActivity(new Intent(SetTimeActivity.this, MapsActivity.class)));
         findViewById(R.id.cancel_button).setOnClickListener( v ->
                 startActivity(new Intent(SetTimeActivity.this, MainActivity.class)));
 
