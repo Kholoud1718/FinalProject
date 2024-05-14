@@ -66,7 +66,7 @@
         android:textColor="@color/white"
         android:textSize="30sp" />
 
-    <EditText
+    <Button
         android:id="@+id/etFromTime"
         android:layout_width="0dp"
         android:layout_height="60dp"
@@ -74,9 +74,13 @@
         app:layout_constraintTop_toBottomOf="@+id/tvFrom"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:hint="@string/_00_00_2024"
-        android:inputType="datetime"
-        android:background="@color/white"
+        android:text="@string/_00_00_2024"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:inputType="none"
+        android:editable="false"
+        android:backgroundTint="@color/white"
         android:alpha="0.6"/>
 
     <TextView
@@ -91,7 +95,7 @@
         android:textSize="30sp"
         android:fontFamily="casual"/>
 
-    <EditText
+    <Button
         android:id="@+id/etToTime"
         android:layout_width="0dp"
         android:layout_height="60dp"
@@ -99,12 +103,17 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:hint="00/00/2024"
-        android:inputType="datetime"
-        android:alpha="0.6"
-        android:background="@color/white"/>
+        android:text="@string/_00_00_2024"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:inputType="none"
+        android:editable="false"
+        android:backgroundTint="@color/white"
+        android:alpha="0.6"/>
 
     <TextView
+        android:visibility="gone"
         android:id="@+id/tvAlarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -117,6 +126,7 @@
         android:fontFamily="casual"/>
 
     <EditText
+        android:visibility="gone"
         android:id="@+id/etAlarmTime"
         android:layout_width="0dp"
         android:layout_height="60dp"

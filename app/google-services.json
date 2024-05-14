@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "981557394471",
+    "firebase_url": "https://challenge-me-81718-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "challenge-me-81718",
+    "storage_bucket": "challenge-me-81718.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981557394471:android:8152845aa605fef3262202",
+        "android_client_info": {
+          "package_name": "com.example.finalproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC06YNtWafAbrNUwzSEVDHSC81QWHbVnm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

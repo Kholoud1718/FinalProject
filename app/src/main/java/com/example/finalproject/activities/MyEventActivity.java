@@ -1,4 +1,4 @@
-package com.example.finalproject;
+package com.example.finalproject.activities;
 
 import android.os.Bundle;
 
@@ -10,9 +10,8 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.finalproject.adapter.ActivityAdapter;
+import com.example.finalproject.R;
 import com.example.finalproject.adapter.EventAdapter;
-import com.example.finalproject.model.ActivityModel;
 import com.example.finalproject.model.EventModel;
 
 import java.util.ArrayList;

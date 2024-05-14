@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Challenge ME</string>
+    <string name="access_token" translatable="false">pk.eyJ1IjoibWFobW91ZDdlbGxhd2F0dHkiLCJhIjoiY2pzeW1jOTJ3MGRycTQzcXRjNHEycnExNyJ9.enxRekCKYRpiy_bpVTEl8Q</string>
+
     <string name="next_event">NEXT EVENT </string>
     <string name="explore_events">Explore Events</string>
     <string name="challenge_categories">Challenge Categories</string>

@@ -209,11 +209,15 @@
             android:layout_marginEnd="8dp"
             android:layout_weight="2"
             android:backgroundTint="#9CDD2C00"
-            android:fontFamily="casual"
+            android:fontFamily="@font/amaranth"
             android:text="Cancel"
+            android:shadowColor="#050505"
+            android:shadowDx="7"
+            android:shadowDy="5"
+            android:shadowRadius="3"
             android:textSize="29sp"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:theme="@style/ThemeOverlay.MaterialComponents.Dark" />
 
         <Button
@@ -224,9 +228,13 @@
             android:layout_marginStart="9dp"
             android:layout_weight="2"
             android:backgroundTint="#BC126E15"
-            android:fontFamily="casual"
+            android:fontFamily="@font/amaranth"
             android:text="Next"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
+            android:shadowColor="#050505"
+            android:shadowDx="7"
+            android:shadowDy="5"
+            android:shadowRadius="3"
             android:textSize="30sp"
             android:textStyle="bold"
             android:theme="@style/ThemeOverlay.MaterialComponents.Dark" />
