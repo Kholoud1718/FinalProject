@@ -1,13 +1,25 @@
-package com.example.finalproject;
+package com.example.finalproject.activities;
 
 import android.content.Intent;
 import android.view.Window;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import android.view.WindowManager;
+import android.widget.Toast;
+
+import com.example.finalproject.R;
+import com.example.finalproject.callbacks.EventCallback;
+import com.example.finalproject.controllers.EventController;
+import com.example.finalproject.model.EventModel;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     TextView appName;
@@ -50,12 +62,5 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this,CommunityActivity.class);
             startActivity(intent); // Start the SecondActivity
         });
-
-
-
-
-
-
-
     }
 }
