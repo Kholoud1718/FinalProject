@@ -2,12 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="15dp"
-    tools:context=".RegisterActivity">
+    tools:context=".ui.main.RegisterActivity">
+
 
     <TextView
         android:layout_width="match_parent"
@@ -48,7 +50,7 @@
 
     <Button
         android:id="@+id/btn_register"
-        android:text="Register"
+        android:text="@string/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
