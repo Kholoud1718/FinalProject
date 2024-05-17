@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.Window;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +16,9 @@ import com.example.finalproject.R;
 import com.example.finalproject.callbacks.EventCallback;
 import com.example.finalproject.controllers.EventController;
 import com.example.finalproject.model.EventModel;
+import com.example.finalproject.ui.login.LoginActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -23,7 +27,7 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     TextView appName;
-    TextView nextEvent;
+    ImageButton logoutBTN;
     Button exploreEvents;
     Button myEvents;
     Button challengeMeCommunity;
@@ -41,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Initialize UI components
         appName = findViewById(R.id.appName);
-        nextEvent = findViewById(R.id.NextEvent); //
+        logoutBTN = findViewById(R.id.logout_btn);
         exploreEvents = findViewById(R.id.ExploreEvents);
         myEvents = findViewById(R.id.MyEvents); //
         challengeMeCommunity = findViewById(R.id.ChallengeMeCommunity); // Make sure ID matches your XML
@@ -61,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
             // Create an Intent to start the SecondActivity
             Intent intent = new Intent(MainActivity.this,CommunityActivity.class);
             startActivity(intent); // Start the SecondActivity
+        });
+
+        logoutBTN.setOnClickListener(v -> {
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
         });
     }
 }
