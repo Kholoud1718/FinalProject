@@ -33,6 +33,15 @@
             android:name=".activities.CommunityActivity"
             android:exported="false" />
         <activity
+            android:name=".activities.JoinGroupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MyStoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.VirtualEventActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.MyEventActivity"
             android:exported="false"
             android:screenOrientation="sensorPortrait" />
